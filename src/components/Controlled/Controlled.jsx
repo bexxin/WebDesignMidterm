@@ -12,8 +12,12 @@ export default function ControlledComponent() {
 
  //handle changes to state
  const handleChange = (event) => {
-  setInputValue(event.target.value);
+    const{name, value} = event.target;
+
+  setInputValue(formInput,[name], value,);
  };
+
+
  //return component object
  return (
   <form>
