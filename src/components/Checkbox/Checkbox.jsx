@@ -14,60 +14,60 @@ export default function Checkboxes({ formData, setFormData }) {
 
   return (
     <div>
-      <label>Qualifications:</label>
+      <div><label>Qualifications:</label></div>
       <div>
-        <label>
-          High School (10th):
-          <input
+        <label><input
             type="checkbox"
             name="highSchool"
             checked={formData.qualifications.highSchool}
             onChange={handleCheckboxChange}
           />
+          High School (10th):
+          
         </label>
       </div>
       <div>
-        <label>
-          Higher School (12th):
-          <input
+        <label><input
             type="checkbox"
             name="higherSchool"
             checked={formData.qualifications.higherSchool}
             onChange={handleCheckboxChange}
           />
+          Higher School (12th):
+          
         </label>
       </div>
       <div>
-        <label>
-          Graduation (Bachelors):
-          <input
+        <label><input
             type="checkbox"
             name="graduation"
             checked={formData.qualifications.graduation}
             onChange={handleCheckboxChange}
           />
+          Graduation (Bachelors):
+          
         </label>
       </div>
       <div>
-        <label>
-          Post Grad (Masters):
-          <input
+        <label><input
             type="checkbox"
             name="postGrad"
             checked={formData.qualifications.postGrad}
             onChange={handleCheckboxChange}
           />
+          Post Grad (Masters):
+          
         </label>
       </div>
       <div>
-        <label>
-          Other:
-          <input
+        <label><input
             type="checkbox"
             name="other"
             checked={formData.qualifications.other}
             onChange={handleCheckboxChange}
           />
+          Other:
+          
         </label>
       </div>
     </div>

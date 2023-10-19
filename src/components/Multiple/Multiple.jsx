@@ -36,7 +36,10 @@ export default function Multiple() {
 
 
  return (
+    
   <form onSubmit={handleSubmit} className="multiple">
+    <div>
+        <h2>Employee Registration Form</h2>
    <label className="multiple__text" htmlFor="firstName">
    First Name:
    </label>
@@ -47,7 +50,9 @@ export default function Multiple() {
     name="firstName"
     value={formData.firstName}
     onChange={handleChange}
-   />
+    minLength={"5"}
+   /></div>
+   <div>
    <label className="multiple__text" htmlFor="lastName">
     Last Name:
    </label>
@@ -58,9 +63,10 @@ export default function Multiple() {
     name="lastName"
     value={formData.lastName}
     onChange={handleChange}
-   />
+   /></div>
+   <div>
    <label className="multiple__text" htmlFor="emailID">
-    Email ID
+    Email ID:
    </label>
    <textarea
     id="emailID"
@@ -68,9 +74,10 @@ export default function Multiple() {
     name="emailID"
     value={formData.emailID}
     onChange={handleChange}
-   />
-   <label className="multiple__text" htmlFor="moblieNumber">
-    Mobile Number
+   /></div>
+   <div>
+   <label className="multiple__text" htmlFor="mobileNumber">
+    Mobile Number:
    </label>
    <textarea
     id="mobileNumber"
@@ -78,7 +85,7 @@ export default function Multiple() {
     name="mobileNumber"
     value={formData.mobileNumber}
     onChange={handleChange}
-   />
+   /></div>
    <Checkbox formData={formData} setFormData={setFormData}/>
 
    <button className="multiple__button" type="submit">
