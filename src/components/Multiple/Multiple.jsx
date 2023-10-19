@@ -4,6 +4,7 @@ import Checkbox from "../Checkbox/Checkbox";
 import "./multiple.css";
 
 export default function Multiple() {
+
  const [formData, setFormData] = useState({
   firstName: "",
   lastName:"",
@@ -29,7 +30,7 @@ export default function Multiple() {
  const handleSubmit = (event) => {
   event.preventDefault();
   alert(
-   `First Name: ${formData.name}, Last Name: ${formData.lastName}, Email Id: ${formData.emailID}, Mobile Number: ${formData.moblieNumber}`
+   `Submission Successful!\nFirst Name: ${formData.name}\nLast Name: ${formData.lastName}\nEmail Id: ${formData.emailID}\nMobile Number: ${formData.moblieNumber}`
   );
  };
 
@@ -43,7 +44,7 @@ export default function Multiple() {
     type="text"
     id="firstName"
     className="multiple__input"
-    name="name"
+    name="firstName"
     value={formData.firstName}
     onChange={handleChange}
    />
@@ -66,6 +67,16 @@ export default function Multiple() {
     className="multiple__textarea"
     name="emailID"
     value={formData.emailID}
+    onChange={handleChange}
+   />
+   <label className="multiple__text" htmlFor="moblieNumber">
+    Mobile Number
+   </label>
+   <textarea
+    id="mobileNumber"
+    className="multiple__textarea"
+    name="mobileNumber"
+    value={formData.mobileNumber}
     onChange={handleChange}
    />
    <Checkbox formData={formData} setFormData={setFormData}/>
