@@ -1,6 +1,8 @@
 
 import React, { useState } from "react";
+import Checkbox from "../Checkbox/Checkbox";
 import "./multiple.css";
+
 export default function Multiple() {
  const [formData, setFormData] = useState({
   firstName: "",
@@ -66,6 +68,8 @@ export default function Multiple() {
     value={formData.emailID}
     onChange={handleChange}
    />
+   <Checkbox formData={formData} setFormData={setFormData}/>
+
    <button className="multiple__button" type="submit">
     Submit
    </button>
